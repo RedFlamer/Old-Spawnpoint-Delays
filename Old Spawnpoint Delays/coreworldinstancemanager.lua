@@ -399,13 +399,9 @@ function CoreWorldInstanceManager:_get_instance_mission_data(path)
 	if elements then
 		for _, element in ipairs(result.default.elements) do
 			if elements[element.id] then
-				local has_old_spawngroups = true
-				for _, spawngroup in pairs(standard_spawngroups["standard_with_single_spooc"]) do -- unless there's a table function to check for presence of all keys
-					if not tweak_data.group_ai.enemy_spawn_groups[spawngroup] then
-						has_old_spawngroups = false
-						break
-					end
-				end
+				local has_old_spawngroups = table.find_all_values(standard_spawngroups["standard_with_single_spooc"], function(group)
+					return tweak_data.group_ai.enemy_spawn_groups[group]
+				end)
 			
 				element.values.interval = elements[element.id].interval
 				
