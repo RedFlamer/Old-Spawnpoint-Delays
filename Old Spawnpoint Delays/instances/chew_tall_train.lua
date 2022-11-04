@@ -1,0 +1,46 @@
+return {
+	[100088] = {
+		interval = 5,
+		preferred_spawn_groups = {
+			"CS_cops",
+			"CS_swats",
+			"CS_heavys",
+			"CS_tanks",
+			"CS_stealth_a",
+			"CS_defend_a",
+			"CS_defend_b",
+			"CS_defend_c",
+			"FBI_swats",
+			"FBI_heavys",
+			"FBI_spoocs",
+			"FBI_stealth_a",
+			"FBI_stealth_b",
+			"FBI_defend_a",
+			"FBI_defend_b",
+			"FBI_defend_c",
+			"FBI_defend_d",
+		}
+	},
+	[100098] = {
+		interval = 50,
+		preferred_spawn_groups = {
+			"CS_cops",
+			"CS_swats",
+			"CS_heavys",
+			"CS_tanks",
+			"CS_stealth_a",
+			"CS_defend_a",
+			"CS_defend_b",
+			"CS_defend_c",
+			"FBI_swats",
+			"FBI_heavys",
+			"FBI_spoocs",
+			"FBI_stealth_a",
+			"FBI_stealth_b",
+			"FBI_defend_a",
+			"FBI_defend_b",
+			"FBI_defend_c",
+			"FBI_defend_d",
+		}
+	},
+}
