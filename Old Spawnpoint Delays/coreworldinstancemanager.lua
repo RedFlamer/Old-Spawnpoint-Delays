@@ -33,7 +33,7 @@ local _get_instance_mission_data_orig = CoreWorldInstanceManager._get_instance_m
 function CoreWorldInstanceManager:_get_instance_mission_data(instance_path)
 	local result = _get_instance_mission_data_orig(self, instance_path)
 	
-	local name = string.match(instance_path, ".*[%/](%g+)/world/world")
+	local name = string.match(instance_path, ".*/(%g+)/world/world")
 	local path = name and OldSpawnpointDelays.mod_path .. "instances/" .. name .. ".lua"
 	local elements = path and io.file_is_readable(path) and blt.vm.dofile(path)
 	if elements then
