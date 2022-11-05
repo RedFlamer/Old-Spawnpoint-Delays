@@ -48,7 +48,7 @@ function CoreWorldInstanceManager:_get_instance_mission_data(instance_path)
 				
 				if has_old_spawngroups then
 					element.values.preferred_spawn_groups = elements[id].preferred_spawn_groups
-					element._old_spawngroups = true
+					element.old_spawngroups = true
 				end
 			end
 		end
