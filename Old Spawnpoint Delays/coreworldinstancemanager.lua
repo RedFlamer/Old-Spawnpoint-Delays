@@ -37,7 +37,7 @@ function CoreWorldInstanceManager:_get_instance_mission_data(instance_path)
 	path = path and OldSpawnpointDelays.mod_path .. "instances/" .. path .. ".lua"
 	local elements = path and io.file_is_readable(path) and blt.vm.dofile(path)
 	if elements then
-		local has_old_spawngroups = table.find_all_values(OldSpawnpointDelays.all_spawngroups, function(group)
+		local has_old_spawngroups = table.true_for_all(OldSpawnpointDelays.all_spawngroups, function(group)
 			return tweak_data.group_ai.enemy_spawn_groups[group]
 		end)
 

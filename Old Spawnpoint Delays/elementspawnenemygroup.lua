@@ -4,7 +4,7 @@ Hooks:PreHook(ElementSpawnEnemyGroup, "init", "revert_spawnpoint_delays_init", f
 end)
 
 -- If you restore old spawngroups, but add new groups. You will likely need to update your method of adding your custom groups in order to preserve the spawngroup selections restored by this mod
-local has_old_spawngroups = table.find_all_values(OldSpawnpointDelays.all_spawngroups, function(group)
+local has_old_spawngroups = table.true_for_all(OldSpawnpointDelays.all_spawngroups, function(group)
 	return tweak_data.group_ai.enemy_spawn_groups[group]
 end)
 
